@@ -7,7 +7,7 @@ public class EnemyDestroyClick : MonoBehaviour {
 	float enemyHealth = 1.0f;
 	void OnClick ( ) {
 		enemyHealth -= clickDamage;
-		progressBar.fillAmount -= enemyHealth ;
+		progressBar.fillAmount = progressBar.fillAmount - clickDamage;
 		if ( enemyHealth <= 0.0f ){
 			StartCoroutine("DestroyPlease");
 		}
