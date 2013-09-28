@@ -9,6 +9,7 @@ public class OrbCollector : MonoBehaviour {
 	public float movementSpeed 	= 10;
 	public float rotationSpeed 	= 5;
 	public bool enemyAI	   		= false;
+	const float movementSpeedConst = 100.0f;
 	Transform  target;
 	void Start ( ) {
 		target = GameObject.FindWithTag( "Player" ).transform; // can replace this with an event system
@@ -26,6 +27,6 @@ public class OrbCollector : MonoBehaviour {
 	}
 	void Animate2DEnemy( ){
 		movementSpeed += 0.001f;
-		transform.position = Vector3.MoveTowards( transform.position, target.transform.position , movementSpeed * Time.deltaTime );
+		transform.position = Vector3.MoveTowards( transform.position, target.transform.position , ( movementSpeed / movementSpeedConst ) * Time.deltaTime );
 	}
 }

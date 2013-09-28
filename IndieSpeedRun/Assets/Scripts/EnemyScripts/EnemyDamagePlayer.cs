@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class EnemyDamagePlayer : MonoBehaviour {
-	void OnTriggerEnter( ){
+	void OnTriggerEnter ( ) {
 		Destroy( this.gameObject );
 	}
 }
