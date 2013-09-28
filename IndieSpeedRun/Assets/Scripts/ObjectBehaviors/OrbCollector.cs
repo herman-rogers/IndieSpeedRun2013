@@ -6,9 +6,9 @@ public class OrbCollector : MonoBehaviour {
 	//to give it simple AI that moves
 	//it towards a player character
 	//-- perfect for orb collection/Simple Enemies
-	public float movementSpeed = 10;
-	public float rotationSpeed = 5;
-	public bool enemyAI	   = false;
+	public float movementSpeed 	= 10;
+	public float rotationSpeed 	= 5;
+	public bool enemyAI	   		= false;
 	Transform  target;
 	void Start ( ) {
 		target = GameObject.FindWithTag( "Player" ).transform; // can replace this with an event system
@@ -25,6 +25,7 @@ public class OrbCollector : MonoBehaviour {
 		transform.position += ( transform.forward * movementSpeed * Time.deltaTime );
 	}
 	void Animate2DEnemy( ){
-		transform.position = Vector3.MoveTowards( transform.position, target.transform.position, movementSpeed * Time.deltaTime );
+		movementSpeed += 0.001f;
+		transform.position = Vector3.MoveTowards( transform.position, target.transform.position , movementSpeed * Time.deltaTime );
 	}
 }
