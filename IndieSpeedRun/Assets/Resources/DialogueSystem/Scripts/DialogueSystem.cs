@@ -4,21 +4,11 @@ using System.Collections;
 public class DialogueSystem : MonoBehaviour {
 	
 	//Public variables.
-	
-	public UIFont Arial;
 	public GameObject defaultMessageBox;
-	
-	
-	
 	//Private variables.
 	
-	/// <summary>
-	/// The font that will be used when a message box is created.
-	/// </summary>
-	UIFont usedFont;
-	
 	private static DialogueSystem Instance;
-	const string prefabLocation = "DialogueSystem/DialogueSystem";
+	const string prefabLocation = "DialogueSystem/Prefabs/DialogueSystem";
 	
 	public static DialogueSystem GetInstance
 	{
@@ -40,12 +30,6 @@ public class DialogueSystem : MonoBehaviour {
 	{
 		defaultMessageBox.GetComponent<MessageBoxManager>().setupMessageBox(msgBox);
 		return defaultMessageBox;
-		
-	}
-	
-	public GameObject GetDefaultMessageBox()
-	{
-		return defaultMessageBox;
 	}
 	
 	public GameObject CreateMessageBox(MessageBox msgBox, GameObject parent)
@@ -53,25 +37,19 @@ public class DialogueSystem : MonoBehaviour {
 		GameObject msgBoxGO = NGUITools.AddChild(parent, defaultMessageBox);
 		msgBoxGO.GetComponent<MessageBoxManager>().setupMessageBox(msgBox);
 		return msgBoxGO;
-		
 	}
-	
-	public GameObject CreateDefaultMessageBox(GameObject parent)
-	{
-		return NGUITools.AddChild(parent, defaultMessageBox);
-	}
-	
-	
-//	public 
 }
 
 public class MessageBox
 {
-	public Color fontColour;
-	public UIFont font = DialogueSystem.GetInstance.Arial;
-	//		public 
-	//	public UIAtlas defaultAtlas;
-	//		public string spriteName;	
+	public UIFont font;
+	public UISprite sprite;
+	
+	public MessageBox(UIFont font, UISprite Sprite)
+	{
+		this.font = font;
+		this.sprite = sprite;
+	}
 }
 
 public static class Colours
