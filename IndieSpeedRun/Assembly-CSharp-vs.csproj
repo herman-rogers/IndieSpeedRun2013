@@ -166,11 +166,18 @@
      <Compile Include="Assets\Resources\DialogueSystem\Scripts\MessageBoxManager.cs" />
      <Compile Include="Assets\Scripts\BtnScripts\ControlsButton.cs" />
      <Compile Include="Assets\Scripts\BtnScripts\ExitButton.cs" />
+<<<<<<< HEAD
      <Compile Include="Assets\Scripts\BtnScripts\Points.cs" />
      <Compile Include="Assets\Scripts\BtnScripts\SoundSlider.cs" />
      <Compile Include="Assets\Scripts\BtnScripts\StartButton.cs" />
      <Compile Include="Assets\Scripts\EnemyScripts\EnemyDestroyClick.cs" />
      <Compile Include="Assets\Scripts\EnemyScripts\EnemySound.cs" />
+=======
+     <Compile Include="Assets\Scripts\BtnScripts\SoundSlider.cs" />
+     <Compile Include="Assets\Scripts\BtnScripts\StartButton.cs" />
+     <Compile Include="Assets\Scripts\EnemyScripts\EnemyDamagePlayer.cs" />
+     <Compile Include="Assets\Scripts\EnemyScripts\EnemyDestroyClick.cs" />
+>>>>>>> 5943162c3cd5d81b66aadcc269684d0e430bf5f1
      <Compile Include="Assets\Scripts\EnemyScripts\EnemySpawn.cs" />
      <Compile Include="Assets\Scripts\Examples\DialogueTest.cs" />
      <Compile Include="Assets\Scripts\InGameNight\MessageCreater.cs" />
@@ -180,8 +187,11 @@
      <Compile Include="Assets\Scripts\ObjectBehaviors\DragSelect.cs" />
      <Compile Include="Assets\Scripts\ObjectBehaviors\OrbCollector.cs" />
      <Compile Include="Assets\Scripts\ObjectBehaviors\TouchGlow.cs" />
+<<<<<<< HEAD
      <Compile Include="Assets\Scripts\PlayerScripts\PlayerDamage.cs" />
      <Compile Include="Assets\Scripts\PlayerScripts\PlayerGlobals.cs" />
+=======
+>>>>>>> 5943162c3cd5d81b66aadcc269684d0e430bf5f1
      <Compile Include="Assets\Scripts\SplashScreen\SplashScreen.cs" />
      <Compile Include="Assets\Scripts\Utils\AnimateSprite.cs" />
      <Compile Include="Assets\Scripts\Utils\BreakPrefabAD.cs" />
@@ -217,7 +227,10 @@
      <None Include="Assets\NGUI\Resources\Shaders\Unlit - Depth.shader" />
      <None Include="Assets\NGUI\Resources\Shaders\Unlit - Transparent Colored (SoftClip).shader" />
      <None Include="Assets\NGUI\Examples\Atlases\Refractive\Refractive Font - Normal.txt" />
+<<<<<<< HEAD
      <None Include="Assets\Text\item text.txt" />
+=======
+>>>>>>> 5943162c3cd5d81b66aadcc269684d0e430bf5f1
      <None Include="Assets\NGUI\Resources\Shaders\Unlit - Transparent Colored (Packed) (AlphaClip) .shader" />
      <None Include="Assets\NGUI\Resources\Shaders\Unlit - Masked Colored.shader" />
      <None Include="Assets\NGUI\Resources\Shaders\Unlit - Transparent Colored (Packed) (SoftClip).shader" />
