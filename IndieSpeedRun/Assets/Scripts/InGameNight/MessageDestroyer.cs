@@ -2,10 +2,8 @@
 using System.Collections;
 
 public class MessageDestroyer : MonoBehaviour {
-
-	void DestroyMessage()
+	public void DestroyMessage( )
 	{
 		Destroy(this.gameObject);	
 	}
-	
 }

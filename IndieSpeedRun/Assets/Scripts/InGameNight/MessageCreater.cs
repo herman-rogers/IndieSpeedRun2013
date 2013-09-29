@@ -25,6 +25,7 @@ public class MessageCreater : MonoBehaviour {
 			msgText.maxLineCount = Mathf.FloorToInt (sprite.transform.localScale.y / msgText.transform.localScale.y);
 //			msgText.shrinkToFit = true;
 			msg.GetComponentInChildren<UILabel>().font = font;
+			MessageManager.AddMessageBox(msg);
 		}
 	}
 	
