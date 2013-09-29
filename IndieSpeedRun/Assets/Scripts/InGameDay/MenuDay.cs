@@ -8,11 +8,8 @@ public class MenuDay : MonoBehaviour {
 	
 	void OnMenuClicked()
 	{
-		menuOpen = !menuOpen;
-		NGUITools.SetActive(menu, menuOpen);
-		TweenAlpha tweenA = menu.GetComponent<TweenAlpha>();
-		tweenA.Play(menuOpen);
-		tweenA.enabled = true;
+		GameObject menuInScene = NGUITools.AddChild(this.gameObject, menu);
+		MessageManager.AddMessageBox(menuInScene);
 	}
 	
 }
