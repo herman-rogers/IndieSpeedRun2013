@@ -11,7 +11,6 @@ public class Timer : MonoBehaviour {
 	}
 	public static NightPhase currentNightPhase = NightPhase.EARLY_NIGHT;
 	void Start( ){
-		this.GetComponent< UILabel >( ).text = "Timer: " + 120;
 		InvokeRepeating( "UpdateTimer", 0.01f, 1.0f );
 	}
 	void UpdateTimer( ){
