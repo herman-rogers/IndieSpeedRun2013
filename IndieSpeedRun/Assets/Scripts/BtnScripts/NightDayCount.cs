@@ -2,10 +2,13 @@
 using System.Collections;
 
 public class NightDayCount : MonoBehaviour {
-	void Update( ){
+	bool flipValue = true;
+	void Awake( ){
 		Time.timeScale = 0;
-		Debug.Log( gameObject.GetComponent< UISprite >( ).alpha );
-		if (gameObject.GetComponent< UISprite >( ).alpha <= 0 ){
+	}
+	void Update( ){
+		if (gameObject.GetComponent< UISprite >( ).alpha <= 0 && flipValue == true){
+			flipValue = false;
 			Time.timeScale = 1;
 		}
 	}

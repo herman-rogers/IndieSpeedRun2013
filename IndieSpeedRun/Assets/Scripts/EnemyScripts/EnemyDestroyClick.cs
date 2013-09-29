@@ -14,7 +14,6 @@ public class EnemyDestroyClick : MonoBehaviour {
 		if ( enemyHealth <= 0.0f ){
 			PlayerGlobals.playerPoints += pointsAwarded;
 			PlayerGlobals.GlobalVariables( );
-			Debug.Log( PlayerPrefs.GetFloat( "playerPoints" ) );
 			StartCoroutine("DestroyPlease");
 		}
 	}
