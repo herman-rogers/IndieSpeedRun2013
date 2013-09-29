@@ -11,7 +11,7 @@ public class MessageCreater : MonoBehaviour {
 	
 	void CreateMessage()
 	{
-		if(!msg)
+		if(!msg && PlayerGlobals.isDay)
 		{
 			msg = DialogueSystem.GetInstance.CreateMessageBox(
 				new MessageBox(font, sprite), this.gameObject);
