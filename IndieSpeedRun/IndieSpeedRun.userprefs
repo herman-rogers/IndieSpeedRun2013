@@ -1,17 +1,6 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\EnemyScripts\EnemyDestroyClick.cs">
-    <Files>
-      <File FileName="Assets\Resources\DialogueSystem\Scripts\DialogueSystem.cs" Line="1" Column="1" />
-      <File FileName="Assets\Resources\DialogueSystem\Scripts\MessageBoxManager.cs" Line="1" Column="1" />
-      <File FileName="Assets\NGUI\Scripts\Interaction\UIButtonMessage.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Utils\SceneForward.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\InGameNight\MessageCreater.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\InGameNight\MessageDestroyer.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Utils\BreakPrefabAD.cs" Line="19" Column="3" />
-      <File FileName="Assets\Scripts\EnemyScripts\EnemyDestroyClick.cs" Line="16" Column="3" />
-    </Files>
-  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
