@@ -2,16 +2,12 @@
 using System.Collections;
 
 public class PlayerDamage : MonoBehaviour {
-	void OnTriggerEnter( ){
-		Debug.Log( tag );
-		if ( tag == "Enemy" ){
-			Debug.Log( "Enemy Damage" );
+	public UISprite warmthBar;
+	public float playerHealth = 5.0f;
+	void OnTriggerEnter( Collider objectCollider ){
+		float enemyDamage = objectCollider.gameObject.GetComponent< EnemyDestroyClick >( ).enemyDamage;
+		if ( objectCollider.tag == "Enemy" ){
+			warmthBar.fillAmount = warmthBar.fillAmount - enemyDamage;
 		}
 	}
-	void OnCollisionEnter( ){
-		
-		Debug.Log( "Collide?" );
-		
-	}
-	
 }

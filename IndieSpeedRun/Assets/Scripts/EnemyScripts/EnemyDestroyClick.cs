@@ -3,6 +3,7 @@ using System.Collections;
 
 public class EnemyDestroyClick : MonoBehaviour {
 	public float clickDamage = 0.34f;
+	public float enemyDamage = 0.2f;
 	public UISprite progressBar;
 	float enemyHealth = 1.0f;
 	void OnClick ( ) {
@@ -12,10 +13,12 @@ public class EnemyDestroyClick : MonoBehaviour {
 			StartCoroutine("DestroyPlease");
 		}
 	}
-	void OnTriggerEnter ( ) {
-		StartCoroutine("DestroyPlease");
+	void OnTriggerEnter ( Collider objectCollider ) {
+		if ( objectCollider.tag == "Player" ){
+			StartCoroutine("DestroyPlease");
+		}
 	}
-	
+
 	IEnumerator DestroyPlease()
 	{
 		yield return new WaitForSeconds(0.009f);
