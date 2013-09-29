@@ -9,6 +9,7 @@ public class MessageBoxManager : MonoBehaviour {
 	
 	public void setupMessageBox(MessageBox msgBox)
 	{
+//		this.text.font = msgBox.font;
 		this.font = msgBox.font;
 		this.box = msgBox.sprite;
 	}
