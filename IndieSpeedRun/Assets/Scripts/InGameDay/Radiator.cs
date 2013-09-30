@@ -6,7 +6,7 @@ public class Radiator : MonoBehaviour {
 	public GameObject radiator;
 	public GameObject radiatorMsg;
 	
-	void OnAwake()
+	void Start()
 	{
 		bool temp = (PlayerGlobals.currentLevel >= 3);
 		NGUITools.SetActive(radiator, PlayerGlobals.isRadiatorOn);
