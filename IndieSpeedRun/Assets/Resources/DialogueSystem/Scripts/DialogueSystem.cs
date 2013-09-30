@@ -38,6 +38,13 @@ public class DialogueSystem : MonoBehaviour {
 		msgBoxGO.GetComponent<MessageBoxManager>().setupMessageBox(msgBox);
 		return msgBoxGO;
 	}
+	
+	public GameObject CreateMessageBox(MessageBox msgBox, GameObject messageBox, GameObject parent)
+	{
+		GameObject msgBoxGO = NGUITools.AddChild(parent, messageBox);
+		msgBoxGO.GetComponent<MessageBoxManager>().setupMessageBox(msgBox);
+		return msgBoxGO;
+	}
 }
 
 public class MessageBox
