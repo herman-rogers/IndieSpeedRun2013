@@ -7,6 +7,7 @@ public static class PlayerGlobals{
 	public static float playerHealth = 1;
 	public static float playerTimer	 = 120;
 	public static int currentLevel 	 = 1;
+	public static int currentDiary	 = 1;
 	public static bool isDay{set; get;}
 	public static bool isRadiatorOn{set; get;}
 	public static bool isWindowOpen{set; get;}
