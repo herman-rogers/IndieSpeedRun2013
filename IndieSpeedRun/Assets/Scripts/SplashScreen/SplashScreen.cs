@@ -4,9 +4,11 @@ using System.Collections;
 public class SplashScreen : MonoBehaviour {
 	
 	public float timeDisplayedFor = 5.0f;
+	public Texture2D cursor;
 	
 	void Start()
 	{
+		Cursor.SetCursor( cursor, Vector2.zero, CursorMode.Auto );
 		Invoke("FinishSplash", timeDisplayedFor);	
 	}
 	void FinishSplash( ){
