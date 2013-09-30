@@ -33,6 +33,9 @@ public class EnemySpawn : MonoBehaviour {
 		}
 	}
 	void Spawn( ){
-		NGUITools.AddChild( this.gameObject , monster );
+//		NGUITools.AddChild( this.gameObject , monster );
+		Instantiate( monster, new Vector3( this.gameObject.transform.position.x + Random.Range( -0.3f, 0.3f ), 
+							( this.gameObject.transform.position.y + Random.Range( -0.3f, 0.3f ) ), 
+							this.gameObject.transform.position.z ), Quaternion.identity );
 	}
 }
