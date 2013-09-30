@@ -4,11 +4,14 @@ using System.Collections;
 public class PlayerDamage : MonoBehaviour {
 	public UISprite warmthBar;
 	public UISprite fader;
+	void Start( ){
+		InvokeRepeating( "UpdateFillBar", 0.01f, 0.009f );
+	}
+	
 	void OnTriggerEnter( Collider objectCollider ){
 		float enemyDamage = objectCollider.gameObject.GetComponent< EnemyDestroyClick >( ).enemyDamage;
 		if ( objectCollider.tag == "Enemy" ){
-			warmthBar.fillAmount 		= warmthBar.fillAmount - enemyDamage;
-			PlayerGlobals.playerHealth 	= warmthBar.fillAmount;
+			PlayerGlobals.playerHealth = PlayerGlobals.playerHealth - enemyDamage;
 			PlayerGlobals.GlobalVariables( );
 			if(fader != null)
 			{
@@ -19,5 +22,8 @@ public class PlayerDamage : MonoBehaviour {
 				fader.alpha = 1.0f - (((x-0.0f)/(1.0f - 0.0f) * (1.0f-0.6f)) + 0.6f);
 			}
 		}
+	}
+	void UpdateFillBar( ){
+		warmthBar.fillAmount = PlayerGlobals.playerHealth;
 	}
 }
