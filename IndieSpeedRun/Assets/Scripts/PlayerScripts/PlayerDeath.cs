@@ -10,6 +10,6 @@ public class PlayerDeath : MonoBehaviour {
 		}
 	}
 	void StartEndGame( ){
-		SceneFadeInOut.LoadLevel( 4, 0.3f, 0.3f, Color.magenta );
+		SceneFadeInOut.LoadLevel( "EndGame", 0.3f, 0.3f, Color.magenta );
 	}
 }
