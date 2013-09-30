@@ -6,7 +6,7 @@ public class PlayerDeath : MonoBehaviour {
 	void Update( ){
 		playerLife = PlayerPrefs.GetFloat( "playerHealth" );
 		if ( playerLife <= 0 ){
-			Invoke( "EndGame", 1.0f );
+			Invoke( "StartEndGame", 1.0f );
 		}
 	}
 	void StartEndGame( ){

@@ -55,9 +55,10 @@ public class Timer : MonoBehaviour {
 ////				clownSpawn.SetActive( false );
 ////			}
 //		}
-		else if( levelTimer <= 0 )
+		else if( levelTimer <= 0 ){
 			PlayerGlobals.playerTimer = 120.0f;
-		PlayerGlobals.GlobalVariables( );
+			PlayerGlobals.GlobalVariables( );
 			SceneFadeInOut.LoadLevel( "LevelWin", 0.03f, 0.03f, Color.magenta );
+		}
 	}
 }
