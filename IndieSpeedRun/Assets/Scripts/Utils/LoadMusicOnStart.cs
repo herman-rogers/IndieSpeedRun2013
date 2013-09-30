@@ -2,13 +2,11 @@
 using System.Collections;
 
 public class LoadMusicOnStart : MonoBehaviour {
-	
 	public AudioClip sceneMusic;
-	
-	// Use this for initialization
+	public float volume = 1.0f;
 	void Start () {
 		if(sceneMusic != null)
-			SceneGlobal.LoadSceneMusic(sceneMusic);
+			SceneGlobal.LoadSceneMusic(sceneMusic, volume);
 		else
 		{
 			Debug.LogError("Scene's Music either null or not loaded correctly!");

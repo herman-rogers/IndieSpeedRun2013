@@ -6,7 +6,7 @@ public class SceneGlobal : MonoBehaviour {
 //	public AudioClip mainMenu;
 //	public AudioClip inGameNight;
 	public static AudioClip currentSceneMusic;
-	
+	public static float volume;
 	static AudioClip previousTrack;
 	void Awake ( ) {
 		PlayerGlobals.GlobalVariables( );
@@ -18,6 +18,11 @@ public class SceneGlobal : MonoBehaviour {
 	public static void LoadSceneMusic(AudioClip trackToPlay)
 	{
 		SceneGlobal.currentSceneMusic = trackToPlay;
+	}
+	public static void LoadSceneMusic(AudioClip trackToPlay, float volume)
+	{
+		SceneGlobal.currentSceneMusic = trackToPlay;
+		SceneGlobal.volume = volume;
 	}
 	
 	void CheckMusicChange()
@@ -38,6 +43,7 @@ public class SceneGlobal : MonoBehaviour {
 		audio.clip = SceneGlobal.currentSceneMusic;
 		previousTrack = SceneGlobal.currentSceneMusic;
 		audio.loop = true;
+		audio.volume = SceneGlobal.volume;
 		Debug.Log("Now Playing Track: " + audio.clip.name.ToString());
 		audio.Play();
 		//TODO: Could add tween to fade in and out the music.

@@ -3,6 +3,16 @@ using System;
 using System.Collections;
 
 public class Timer : MonoBehaviour {
+//	public GameObject doorSpawn;
+//	public GameObject spawnHole;
+//	public GameObject spawnWindows;
+//	public GameObject spawnBird;
+//	public GameObject birdPrefab;
+//	public GameObject blobPrefab;
+//	public GameObject hairPrefab;
+	public GameObject wormPrefab;
+	//public GameObject clownSpawn;
+	//public GameObject clownPrefab;
 	public enum NightPhase{
 		EARLY_NIGHT,
 		MID_NIGHT,
@@ -28,7 +38,26 @@ public class Timer : MonoBehaviour {
 			Timer.currentNightPhase = Timer.NightPhase.MID_NIGHT;
 		else if( levelTimer >= 90)
 			Timer.currentNightPhase = Timer.NightPhase.EARLY_NIGHT;
+//		if ( levelTimer >= 1 && levelTimer <= 9 ){
+//			if ( birdPrefab == null ){
+//				spawnBird.SetActive( false );
+//			}
+//			if ( blobPrefab == null ){
+//				spawnWindows.SetActive( false );
+//			}
+//			if ( hairPrefab == null ){
+//				spawnHole.SetActive( false );
+//			}
+//			if ( doorSpawn == null ){
+//				doorSpawn.SetActive( false );
+//			}
+////			if ( clownSpawn == null ){
+////				clownSpawn.SetActive( false );
+////			}
+//		}
 		else if( levelTimer <= 0 )
+			PlayerGlobals.playerTimer = 120.0f;
+		PlayerGlobals.GlobalVariables( );
 			SceneFadeInOut.LoadLevel( "LevelWin", 0.03f, 0.03f, Color.magenta );
 	}
 }
