@@ -24,7 +24,7 @@ public class EnemyDestroyClick : MonoBehaviour {
 	}
 	IEnumerator DestroyPlease()
 	{
-		yield return new WaitForSeconds(0.009f);
+		yield return new WaitForSeconds(0.09f);
 		monsterSound.transform.parent = this.transform.parent;
 		monsterSound.GetComponent<EnemySound>().PlayClipAndKill();
 		Destroy( this.gameObject );
