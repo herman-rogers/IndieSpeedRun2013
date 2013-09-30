@@ -1,8 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class DayInit : MonoBehaviour {
+public class NightInit : MonoBehaviour {
 	public GameObject doorOpen;
+	public GameObject jamesTheCat;
 	public GameObject doorClosed;
 	public GameObject windowOpen;
 	public GameObject windowClosed;
@@ -12,15 +13,18 @@ public class DayInit : MonoBehaviour {
 	public GameObject pictureNormal;
 	public GameObject pictureChanged;
 	
-	public GameObject room;
 	public bool cheat;
-	void Start()
-	{
+	public GameObject room;
+	// Use this for initialization
+	void Start () {
 		if(room == null)
 			room = this.gameObject;
+		
 		//DOOR
-		if( PlayerGlobals.isDoorOpen || cheat )
+		if( PlayerGlobals.isDoorOpen || cheat ){
 			NGUITools.AddChild(room, doorOpen);
+			NGUITools.AddChild(room, jamesTheCat);
+		}
 		else
 			NGUITools.AddChild(room, doorClosed);
 		//WINDOW
@@ -42,8 +46,8 @@ public class DayInit : MonoBehaviour {
 		if( PlayerGlobals.isRadiatorOn || cheat )
 			NGUITools.AddChild(room, radiator);
 		
-		PlayerGlobals.isDay = true;
+		PlayerGlobals.isDay = false;
 		Destroy( this );
+		
 	}
-	
 }
