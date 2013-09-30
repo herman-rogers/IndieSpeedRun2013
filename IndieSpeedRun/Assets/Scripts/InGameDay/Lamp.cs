@@ -9,7 +9,7 @@ public class Lamp : MonoBehaviour {
 	public GameObject messageInteractive;
 	public GameObject messageNormal;
 	
-	void OnAwake()
+	void Start()
 	{
 		bool isHighEnoughProgress = (PlayerGlobals.currentLevel >= 2);
 		NGUITools.SetActive(messageInteractive, isHighEnoughProgress);

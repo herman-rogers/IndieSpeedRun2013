@@ -9,7 +9,7 @@ public class Picture : MonoBehaviour {
 	public GameObject messageInteractive;
 	public GameObject messageNormal;
 	
-	void OnAwake()
+	void Start()
 	{
 		bool isHighEnoughProgress = (PlayerGlobals.currentLevel >= 3);
 		NGUITools.SetActive(messageInteractive, isHighEnoughProgress);
