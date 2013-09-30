@@ -39,8 +39,7 @@ public class DayInit : MonoBehaviour {
 		else
 			NGUITools.AddChild(room, pictureNormal);
 		//RADIATOR	
-		if( PlayerGlobals.isRadiatorOn || cheat )
-			NGUITools.AddChild(room, radiator);
+		NGUITools.AddChild(room, radiator);
 		
 		PlayerGlobals.isDay = true;
 		Destroy( this );
