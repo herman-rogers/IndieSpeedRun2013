@@ -8,7 +8,7 @@ public class DayInit : MonoBehaviour {
 	public GameObject windowClosed;
 	public GameObject lampBroken;
 	public GameObject lampFixed;
-	public GameObject radiator;
+//	public GameObject radiator;
 	public GameObject pictureNormal;
 	public GameObject pictureChanged;
 	
@@ -39,7 +39,7 @@ public class DayInit : MonoBehaviour {
 		else
 			NGUITools.AddChild(room, pictureNormal);
 		//RADIATOR	
-		NGUITools.AddChild(room, radiator);
+//		NGUITools.AddChild(room, radiator);
 		
 		PlayerGlobals.isDay = true;
 		Destroy( this );
