@@ -52,7 +52,7 @@ public class MessageBox
 	public UIFont font;
 	public UISprite sprite;
 	
-	public MessageBox(UIFont font, UISprite Sprite)
+	public MessageBox(UIFont font, UISprite sprite)
 	{
 		this.font = font;
 		this.sprite = sprite;

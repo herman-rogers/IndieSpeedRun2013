@@ -5,7 +5,7 @@ public class EnemySpawn : MonoBehaviour {
 	public GameObject monster;
 	public float spawnRate = 0.01f;
 	public float spawnDelay = 0.1f;
-	float timer = 0;
+//	float timer = 0;
 	Timer.NightPhase currentPhase = Timer.NightPhase.MID_NIGHT;
 	void Awake ( ){
 		InvokeRepeating( "StartSpawn", spawnDelay, spawnRate );

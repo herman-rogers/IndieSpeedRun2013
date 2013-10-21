@@ -4,7 +4,7 @@ using System.Collections;
 public class MenuDay : MonoBehaviour {
 	
 	public GameObject menu;
-	bool menuOpen = false;
+//	bool menuOpen = false;
 	
 	void OnMenuClicked()
 	{
